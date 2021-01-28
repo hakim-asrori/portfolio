@@ -73,9 +73,9 @@ $(window).scroll(function(){
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
 	if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-		document.getElementById("ignielToTop").style.display = "block";
+		document.getElementById("_back-to-top").style.display = "block";
 	} else {
-		document.getElementById("ignielToTop").style.display = "none";
+		document.getElementById("_back-to-top").style.display = "none";
 	}
 }
 function topFunction() {
