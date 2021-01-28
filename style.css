@@ -50,7 +50,7 @@ nav ul {
 nav ul li a {
 	color: #FFFFFF;
 	text-decoration: none;
-	font-size: 1em;
+	font-size: .8rem;
 	font-weight: bold;
 }
 
@@ -133,8 +133,18 @@ nav ul li a:hover {
 	text-shadow: 1px 1px 10px rgba(0, 0, 0, 1);
 }
 
+.jumbotron ._btn-xl {
+	position: relative;
+	padding: 1.25rem 2.25rem;
+	font-size: 0.85rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 10rem;
+}
+
 section {
-	min-height: 300px;
+	min-height: 400px;
 	z-index: -3;
 }
 
@@ -160,13 +170,13 @@ section._about {
 	transform: translate(0, 0);
 }
 
-._contact {
-	min-height: 600px;
-}
-
 ._contact p, {
 	width: 50vw;
 	text-align: center;
+}
+
+._contact {
+	min-height: 600px;
 }
 
 ._info ._sosial-link a {
@@ -191,16 +201,16 @@ section._about {
 }
 
 ._info-loc i {
-    font-size: 32px;
-    color: #1dc8cd;
-    float: left;
-    line-height: 1;
+	font-size: 32px;
+	color: #1dc8cd;
+	float: left;
+	line-height: 1;
 }
 
 ._info-loc p, ._info-loc p {
-    padding: 0 0 10px 42px;
-    line-height: 28px;
-    font-size: 14px;
+	padding: 0 0 10px 42px;
+	line-height: 28px;
+	font-size: 14px;
 }
 
 ._info-loc p a {
@@ -217,7 +227,7 @@ section._about {
 	height: 100px;
 }
 
-._btn-xl {
+._about ._btn-xl {
 	padding: 1.25rem 2.25rem;
 	font-size: 0.85rem;
 	font-weight: 700;
@@ -251,7 +261,7 @@ h2 {
 }
 
 footer {
-	position: absolute;
+	position: relative;
 	width: 100%;
 	height: 80px;
 	bottom: 0;
@@ -268,17 +278,27 @@ footer p i {
 	color: salmon;
 }
 
-/* Breakpoints */
-
-/* Ukuran Table */
-@media screen and (max-width: 768px) {
-	nav ul {
-		width: 50%;
-	}
+#ignielToTop {
+	display:none;
+	z-index:2;
+	position:fixed;
+	bottom:20px;
+	right:20px;
+	border-radius:2px;
+	cursor:pointer;
+	transition:all .4s;
+	width:45px;
+	height:45px;
+	background:#000 url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z' fill='%23fff'/%3E%3C/svg%3E") no-repeat center center;
+}
+#ignielToTop:hover{
+	background:#f4623a url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z' fill='%23fff'/%3E%3C/svg%3E") no-repeat center center;
 }
 
-/* Ukuran Mobile */
-@media screen and (max-width: 576px) {
+/* Breakpoints */
+
+/* Ukuran Laptop -> Mobile */
+@media (max-width: 992px) {
 	.jumbotron {
 		margin-top: 50px;
 	}
@@ -294,6 +314,7 @@ footer p i {
 		right: 0;
 		top: -1rem;
 		height: 100vh;
+		width: 80%;
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-evenly;
@@ -312,4 +333,5 @@ footer p i {
 		opacity: 1;
 		transform: translateX(0);
 	}
+
 }

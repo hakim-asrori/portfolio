@@ -16,6 +16,7 @@ var navbarCollapse = function () {
 navbarCollapse();
 $(window).scroll(navbarCollapse);
 
+
 // event untuk link di klik
 $('._scroll').on('click', function (e) {
 
@@ -56,7 +57,7 @@ $(window).scroll(function(){
 
 
 	// portfolio
-	if( wScroll > $('._myTeam').offset().top - 100 ) {
+	if( wScroll > $('._myTeam').offset().top - 400 ) {
 		
 		$('._myTeam ._thumbnail').each(function(i) {
 			setTimeout(function() {
@@ -68,3 +69,16 @@ $(window).scroll(function(){
 	}
 
 });
+
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+	if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+		document.getElementById("ignielToTop").style.display = "block";
+	} else {
+		document.getElementById("ignielToTop").style.display = "none";
+	}
+}
+function topFunction() {
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;	
+}
