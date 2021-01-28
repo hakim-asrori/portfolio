@@ -114,7 +114,7 @@ nav ul li a:hover {
 .jumbotron {
 	z-index: -3;
 	opacity: .9;
-	background-image: url(./images/bg-ruang-kerja.jpg);
+	background-image: url(/images/bg-ruang-kerja.jpg);
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: -100px 0;
@@ -266,6 +266,30 @@ footer p, footer p a {
 
 footer p i {
 	color: salmon;
+}
+
+/* Light Box */
+._gallery-item {
+	overflow: hidden;
+	position: relative;
+	padding: 0;
+	vertical-align: middle;
+	text-align: center;
+}
+
+._gallery-item img {
+	transition: all ease-in-out 0.4s;
+	width: 100%;
+}
+
+._gallery-item:hover img {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+._gallery-item:hover .gallery-overlay {
+	opacity: 1;
+	background: rgba(0, 0, 0, 0.7);
 }
 
 /* Smooth Scroll To Top */
